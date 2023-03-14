@@ -5,7 +5,6 @@ const Nvbar = () => {
   const setActiveClass = ({ isActive }) => {
     return isActive ? 'active' : undefined
   }
-
   return (
     <>
       <Navbar
@@ -13,13 +12,13 @@ const Nvbar = () => {
         variant='dark'
       >
         <Container className='justify-content-between'>
-          <Navbar.Brand href='#home'>Navbar</Navbar.Brand>
+          <Navbar.Brand>PokeApi</Navbar.Brand>
           <div>
             <NavLink
               to='/'
               className={`${setActiveClass} ms-3`}
             >
-              Home
+              Inicio
             </NavLink>
             <NavLink
               to='/pokemones'

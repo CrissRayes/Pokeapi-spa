@@ -1,9 +1,13 @@
+import { Container } from 'react-bootstrap'
+
 const NotFound = () => {
   return (
-    <div>
-      <h1>404</h1>
-      <h2>Not Found</h2>
-    </div>
+    <>
+      <Container className='text-center mt-5'>
+        <h1>404</h1>
+        <h2>Not Found</h2>
+      </Container>
+    </>
   )
 }
 
