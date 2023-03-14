@@ -4,19 +4,23 @@ import { useEffect, useState } from 'react'
 
 const Pokemon = () => {
   const [character, setCharacter] = useState([])
+  const [abilites, setAbilities] = useState([])
+  const [types, setTypes] = useState([])
   const { id } = useParams()
 
   const getCharacter = async () => {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     const data = await response.json()
+
+    setAbilities(data.abilities) // se define el estado de abilites para no tener el error al momento del map
+    setTypes(data.types)
+
     const dataCharacter = {
       name: data.name,
       img: data.sprites.other.home.front_default,
       base_experience: data.base_experience,
       height: data.height,
       weight: data.weight,
-      // abilites: data.abilities,
-      // types: data.types,
     }
     setCharacter(dataCharacter)
     return dataCharacter
@@ -42,6 +46,18 @@ const Pokemon = () => {
               <li>Experiencia: {character.base_experience}</li>
               <li>Peso: {character.weight}</li>
               <li>Altura: {character.height}</li>
+              <li>Habilidades:</li>
+              <ul>
+                {abilites.map((ability, index) => (
+                  <li key={index}>{ability.ability.name}</li>
+                ))}
+              </ul>
+              <li>Tipos:</li>
+              <ul>
+                {types.map((type, index) => (
+                  <li key={index}>{type.type.name}</li>
+                ))}
+              </ul>
             </ul>
           </div>
         </div>
