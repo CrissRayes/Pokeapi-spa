@@ -41,7 +41,7 @@ const Pokemon = () => {
             />
           </div>
           <div className='col'>
-            <h3>{character.name}</h3>
+            <h3 className='text-uppercase'>{character.name}</h3>
             <ul>
               <li>Experiencia: {character.base_experience}</li>
               <li>Peso: {character.weight}</li>
