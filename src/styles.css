@@ -12,7 +12,23 @@ code {
     monospace;
 }
 
-.active {
-  color: red;
+a {
+  color: #616161;
+}
+
+a:link {
+  color: #616161;
   text-decoration: none;
+}
+
+a:visited {
+  color: #616161;
+}
+
+a:hover {
+  color: #ffffff !important;
+}
+
+.active {
+  color: #ffa726 !important;
 }
