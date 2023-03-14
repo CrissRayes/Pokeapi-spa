@@ -15,8 +15,8 @@ const Pokemon = () => {
       base_experience: data.base_experience,
       height: data.height,
       weight: data.weight,
-      abilities: data.abilities,
-      types: data.types,
+      // abilites: data.abilities,
+      // types: data.types,
     }
     setCharacter(dataCharacter)
     return dataCharacter
@@ -39,10 +39,9 @@ const Pokemon = () => {
           <div className='col'>
             <h3>{character.name}</h3>
             <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Experiencia: {character.base_experience}</li>
+              <li>Peso: {character.weight}</li>
+              <li>Altura: {character.height}</li>
             </ul>
           </div>
         </div>
