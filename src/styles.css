@@ -13,22 +13,41 @@ code {
 }
 
 a {
-  color: #616161;
+  color: #bdbdbd;
 }
 
 a:link {
-  color: #616161;
+  color: #bdbdbd;
   text-decoration: none;
 }
 
 a:visited {
-  color: #616161;
+  color: #bdbdbd;
 }
 
 a:hover {
-  color: #ffffff !important;
+  color: #ffeb3b !important;
 }
 
 .active {
-  color: #ffa726 !important;
+  color: #ffc107 !important;
+}
+
+/* clase para div con background image */
+.bg-image {
+  background-image: url('./assets/img/pikachu.jpeg');
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+h1 {
+  font-size: 5rem !important;
+}
+
+.sub-title {
+  font-size: 2rem !important;
+  color: #616161;
 }
