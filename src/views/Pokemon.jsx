@@ -4,31 +4,32 @@ import { useEffect, useState } from 'react'
 
 const Pokemon = () => {
   const [character, setCharacter] = useState([])
+  // se define el estado de abilites y types para no tener el error al momento del map
   const [abilites, setAbilities] = useState([])
   const [types, setTypes] = useState([])
   const { id } = useParams()
 
-  const getCharacter = async () => {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    const data = await response.json()
-
-    setAbilities(data.abilities) // se define el estado de abilites para no tener el error al momento del map
-    setTypes(data.types)
-
-    const dataCharacter = {
-      name: data.name,
-      img: data.sprites.other.home.front_default,
-      base_experience: data.base_experience,
-      height: data.height,
-      weight: data.weight,
-    }
-    setCharacter(dataCharacter)
-    return dataCharacter
-  }
-
   useEffect(() => {
+    const getCharacter = async () => {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      const data = await response.json()
+
+      setAbilities(data.abilities)
+      setTypes(data.types)
+
+      const dataCharacter = {
+        name: data.name,
+        img: data.sprites.other.home.front_default,
+        base_experience: data.base_experience,
+        height: data.height,
+        weight: data.weight,
+      }
+      setCharacter(dataCharacter)
+      return dataCharacter
+    }
+
     getCharacter()
-  }, [])
+  }, [id])
 
   return (
     <>
