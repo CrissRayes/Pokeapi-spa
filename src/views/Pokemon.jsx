@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
+import { Container, Card } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 
 const Pokemon = () => {
@@ -35,32 +35,35 @@ const Pokemon = () => {
   return (
     <>
       <Container className='mt-5'>
+        {/* dividir el contenido de la pagina en dos columnas */}
         <div className='row'>
-          <div className='col'>
-            <img
-              src={character.img}
-              alt={character.name}
-            />
-          </div>
-          <div className='col'>
-            <h3 className='text-uppercase'>{character.name}</h3>
-            <ul>
-              <li>Experiencia: {character.base_experience}</li>
-              <li>Peso: {character.weight}</li>
-              <li>Altura: {character.height}</li>
-              <li>Habilidades:</li>
+          <div className='col-6'>
+            <h1 className='text-uppercase'>{character.name}</h1>
+            <ul className='list-group list-group-flush'>
+              <li className='list-group-item'>
+                Experiencia: {character.base_experience}
+              </li>
+              <li className='list-group-item'>Peso: {character.weight}</li>
+              <li className='list-group-item'>Altura: {character.height}</li>
+              <li className='list-group-item'>Habilidades:</li>
               <ul>
                 {abilites.map((ability, index) => (
                   <li key={index}>{ability.ability.name}</li>
                 ))}
               </ul>
-              <li>Tipos:</li>
+              <li className='list-group-item'>Tipos:</li>
               <ul>
                 {types.map((type, index) => (
                   <li key={index}>{type.type.name}</li>
                 ))}
               </ul>
             </ul>
+          </div>
+          <div className='col-6'>
+            <img
+              alt='pokemon'
+              src={character.img}
+            />
           </div>
         </div>
       </Container>
