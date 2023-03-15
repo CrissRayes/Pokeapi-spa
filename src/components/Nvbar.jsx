@@ -1,5 +1,10 @@
 import { Navbar, Container } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
+import iconEevee from '../assets/img/iconEevee.png'
+import iconJigglypuff from '../assets/img/iconJigglypuff.png'
+import iconMapa from '../assets/img/iconMapa.png'
+import iconPikachu from '../assets/img/iconPikachu.png'
+import iconPokebola from '../assets/img/iconPokebola.png'
 
 const Nvbar = () => {
   const setActiveClass = ({ isActive }) => {
@@ -12,7 +17,30 @@ const Nvbar = () => {
         variant='dark'
       >
         <Container className='justify-content-between'>
-          <Navbar.Brand href='/'>PokeApi</Navbar.Brand>
+          <Navbar.Brand href='/'>
+            <div className='nav-icons-imgs'>
+              <img
+                src={iconEevee}
+                alt='iconEevee'
+              />
+              <img
+                src={iconJigglypuff}
+                alt='iconJigglypuff'
+              />
+              <img
+                src={iconPikachu}
+                alt='iconPikachu'
+              />
+              <img
+                src={iconPokebola}
+                alt='iconPokebola'
+              />
+              <img
+                src={iconMapa}
+                alt='iconMapa'
+              />
+            </div>
+          </Navbar.Brand>
           <div>
             <NavLink
               to='/'

@@ -43,7 +43,7 @@ const Pokemones = () => {
           <option value='gyarados'>Gyarados</option>
         </select>
         <button
-          className='btn btn-primary mt-3 mb-3'
+          className='btn-orange mt-3 mb-3'
           onClick={handleNavigate}
         >
           Buscar

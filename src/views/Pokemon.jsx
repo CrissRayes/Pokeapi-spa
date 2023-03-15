@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom'
-import { Container, Card } from 'react-bootstrap'
+import { useParams, Link } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
 import { useEffect, useState } from 'react'
 
 const Pokemon = () => {
@@ -35,7 +35,6 @@ const Pokemon = () => {
   return (
     <>
       <Container className='mt-5'>
-        {/* dividir el contenido de la pagina en dos columnas */}
         <div className='row'>
           <div className='col-6'>
             <h1 className='text-uppercase'>{character.name}</h1>
@@ -65,6 +64,14 @@ const Pokemon = () => {
               src={character.img}
             />
           </div>
+        </div>
+        <div className='mt-5'>
+          <Link
+            to='/pokemones'
+            className='btn-orange'
+          >
+            Volver
+          </Link>
         </div>
       </Container>
     </>

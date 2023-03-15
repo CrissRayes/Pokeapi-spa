@@ -68,3 +68,32 @@ h1 {
   display: inline-block;
   margin: 0 10px;
 }
+
+.btn-orange {
+  background-color: #ff9800;
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav-icons-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-icons-imgs img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #ff9800;
+  background-color: white;
+}
+
+.nav-icons-imgs img:last-child {
+  margin: 0;
+}
