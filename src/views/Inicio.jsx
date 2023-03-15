@@ -7,9 +7,7 @@ const Inicio = () => {
         <div className='row'>
           <div className='col-6 bg-image'></div>
           <div className='col-6 d-flex flex-column justify-content-center'>
-            {/* <div> */}
             <h1>Bienvenido Maestro Pokémon</h1>
-            {/* </div> */}
             <h2 className='sub-title'>
               Descubre tu Pokémon favorito y conoce sus poderes
             </h2>

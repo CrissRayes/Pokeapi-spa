@@ -13,7 +13,7 @@ const Pokemones = () => {
     if (id !== '') {
       navigate(`/pokemon/${id}`)
     } else {
-      setMensaje('😜 Debes seleccionar un pokémon')
+      setMensaje('Debes seleccionar un pokémon')
 
       setTimeout(() => {
         setMensaje('')

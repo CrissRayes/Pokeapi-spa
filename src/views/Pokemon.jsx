@@ -14,6 +14,7 @@ const Pokemon = () => {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       const data = await response.json()
 
+      // se hace el set de abilities y types con la data para que no de error al momento de hacer el map
       setAbilities(data.abilities)
       setTypes(data.types)
 

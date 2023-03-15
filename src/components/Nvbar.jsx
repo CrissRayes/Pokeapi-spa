@@ -12,7 +12,7 @@ const Nvbar = () => {
         variant='dark'
       >
         <Container className='justify-content-between'>
-          <Navbar.Brand>PokeApi</Navbar.Brand>
+          <Navbar.Brand href='/'>PokeApi</Navbar.Brand>
           <div>
             <NavLink
               to='/'
@@ -24,7 +24,7 @@ const Nvbar = () => {
               to='/pokemones'
               className={`${setActiveClass} ms-3`}
             >
-              Pokemones
+              Pokémones
             </NavLink>
           </div>
         </Container>
