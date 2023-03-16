@@ -8,6 +8,18 @@ const Pokemones = () => {
   const navigate = useNavigate()
   const { id, setId } = useContext(MyContext)
   const [mensaje, setMensaje] = useState('')
+  const opciones = [
+    'pikachu',
+    'charizard',
+    'squirtle',
+    'jigglypuff',
+    'eevee',
+    'gengar',
+    'mewtwo',
+    'mew',
+    'lugia',
+    'gyarados',
+  ]
 
   const handleNavigate = () => {
     if (id !== '') {
@@ -31,16 +43,14 @@ const Pokemones = () => {
           onChange={e => setId(e.target.value)}
         >
           <option value=''>--Selecciona un pokémon--</option>
-          <option value='pikachu'>Pikachu</option>
-          <option value='charizard'>Charizard</option>
-          <option value='squirtle'>Squirtle</option>
-          <option value='jigglypuff'>Jigglypuff</option>
-          <option value='eevee'>Eevee</option>
-          <option value='gengar'>Gengar</option>
-          <option value='mewtwo'>Mewtwo</option>
-          <option value='mew'>Mew</option>
-          <option value='lugia'>Lugia</option>
-          <option value='gyarados'>Gyarados</option>
+          {opciones.map((opcion, index) => (
+            <option
+              key={index}
+              value={opcion}
+            >
+              {opcion}
+            </option>
+          ))}
         </select>
         <button
           className='btn-orange mt-3 mb-3'
