@@ -1,15 +1,24 @@
 import { Navbar, Container } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import iconEevee from '../assets/img/iconEevee.png'
 import iconJigglypuff from '../assets/img/iconJigglypuff.png'
-import iconMapa from '../assets/img/iconMapa.png'
 import iconPikachu from '../assets/img/iconPikachu.png'
 import iconPokebola from '../assets/img/iconPokebola.png'
 
 const Nvbar = () => {
+  const navigate = useNavigate()
   const setActiveClass = ({ isActive }) => {
     return isActive ? 'active' : undefined
   }
+
+  const handleGoHome = () => {
+    navigate('/')
+  }
+
+  const handleGoPokemon = id => {
+    navigate(`/pokemon/${id}`)
+  }
+
   return (
     <>
       <Navbar
@@ -18,27 +27,31 @@ const Nvbar = () => {
         fixed='top'
       >
         <Container className='justify-content-between'>
-          <Navbar.Brand href='/'>
+          <Navbar.Brand>
             <div className='nav-icons-imgs'>
               <img
                 src={iconEevee}
-                alt='iconEevee'
+                alt='Eevee'
+                className='icon-live'
+                onClick={() => handleGoPokemon('eevee')}
               />
               <img
                 src={iconJigglypuff}
-                alt='iconJigglypuff'
+                alt='Jigglypuff'
+                className='icon-live'
+                onClick={() => handleGoPokemon('jigglypuff')}
               />
               <img
                 src={iconPikachu}
-                alt='iconPikachu'
+                alt='Pikachu'
+                className='icon-live'
+                onClick={() => handleGoPokemon('pikachu')}
               />
               <img
                 src={iconPokebola}
                 alt='iconPokebola'
-              />
-              <img
-                src={iconMapa}
-                alt='iconMapa'
+                className='icon-live'
+                onClick={handleGoHome}
               />
             </div>
           </Navbar.Brand>

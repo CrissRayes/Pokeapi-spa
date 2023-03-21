@@ -116,6 +116,15 @@ h1 {
   margin: 0;
 }
 
+.icon-live {
+  transition: transform 0.5s ease;
+}
+.icon-live:hover {
+  z-index: 100;
+  transform: translate(10px, 10px) scale(1.1);
+  cursor: pointer;
+}
+
 .overlay::after {
   content: '';
   position: absolute;
