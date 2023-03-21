@@ -34,44 +34,50 @@ const Pokemon = () => {
 
   return (
     <>
-      <Container className='mt-5'>
-        <div className='row'>
-          <div className='col-6'>
-            <h1 className='text-uppercase'>{character.name}</h1>
-            <ul className='list-group list-group-flush'>
-              <li className='list-group-item'>
-                Experiencia: {character.base_experience}
-              </li>
-              <li className='list-group-item'>Peso: {character.weight}</li>
-              <li className='list-group-item'>Altura: {character.height}</li>
-              <li className='list-group-item'>Habilidades:</li>
-              <ul>
-                {abilites.map((ability, index) => (
-                  <li key={index}>{ability.ability.name}</li>
-                ))}
+      <Container>
+        <div className='d-flex justify-content-center align-items-center vh-100 position-relative'>
+          <div className='grid-col-2 bg-white rounded p-5'>
+            <div>
+              <img
+                alt='pokemon'
+                src={character.img}
+              />
+            </div>
+            <div className='bg-gris rounded p-5 shadow position-relative card-gris'>
+              <h1 className='text-uppercase'>{character.name}</h1>
+              <ul className='list-group list-group-flush'>
+                <li className='list-group-item bg-gris'>
+                  Experiencia: {character.base_experience}
+                </li>
+                <li className='list-group-item bg-gris'>
+                  Peso: {character.weight}
+                </li>
+                <li className='list-group-item bg-gris'>
+                  Altura: {character.height}
+                </li>
+                <li className='list-group-item bg-gris'>Habilidades:</li>
+                <ul>
+                  {abilites.map((ability, index) => (
+                    <li key={index}>{ability.ability.name}</li>
+                  ))}
+                </ul>
+                <li className='list-group-item bg-gris'>Tipos:</li>
+                <ul>
+                  {types.map((type, index) => (
+                    <li key={index}>{type.type.name}</li>
+                  ))}
+                </ul>
               </ul>
-              <li className='list-group-item'>Tipos:</li>
-              <ul>
-                {types.map((type, index) => (
-                  <li key={index}>{type.type.name}</li>
-                ))}
-              </ul>
-            </ul>
+              <div className='btn-volver'>
+                <Link
+                  to='/pokemones'
+                  className='btn-volver'
+                >
+                  Volver
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className='col-6'>
-            <img
-              alt='pokemon'
-              src={character.img}
-            />
-          </div>
-        </div>
-        <div className='mt-5'>
-          <Link
-            to='/pokemones'
-            className='btn-orange'
-          >
-            Volver
-          </Link>
         </div>
       </Container>
     </>
