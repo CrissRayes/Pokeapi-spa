@@ -12,14 +12,6 @@ const Nvbar = () => {
   }
   return (
     <>
-      {/* ejemplo navbar bootstarp fija y transparente */}
-      {/* <Navbar
-        bg='transparent'
-        variant='dark'
-        fixed='top'
-        className='navbar'
-      > */}
-
       <Navbar
         bg='transparent'
         variant='dark'
