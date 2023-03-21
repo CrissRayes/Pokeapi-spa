@@ -12,9 +12,18 @@ const Nvbar = () => {
   }
   return (
     <>
-      <Navbar
-        bg='dark'
+      {/* ejemplo navbar bootstarp fija y transparente */}
+      {/* <Navbar
+        bg='transparent'
         variant='dark'
+        fixed='top'
+        className='navbar'
+      > */}
+
+      <Navbar
+        bg='transparent'
+        variant='dark'
+        fixed='top'
       >
         <Container className='justify-content-between'>
           <Navbar.Brand href='/'>

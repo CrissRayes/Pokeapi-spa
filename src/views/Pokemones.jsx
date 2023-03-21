@@ -36,29 +36,35 @@ const Pokemones = () => {
   return (
     <>
       <Container className='mt-5'>
-        <h1>Pokemones</h1>
-        <select
-          className='form-select'
-          value={id}
-          onChange={e => setId(e.target.value)}
-        >
-          <option value=''>--Selecciona un pokémon--</option>
-          {opciones.map((opcion, index) => (
-            <option
-              key={index}
-              value={opcion}
+        <div className='d-flex align-items-center justify-content-center vh-100'>
+          <div className='w-50 bg-white bg-opacity-50 rounded p-5'>
+            <h1>Pokemones</h1>
+            <select
+              className='form-select'
+              value={id}
+              onChange={e => setId(e.target.value)}
             >
-              {opcion}
-            </option>
-          ))}
-        </select>
-        <button
-          className='btn-orange mt-3 mb-3'
-          onClick={handleNavigate}
-        >
-          Buscar
-        </button>
-        {mensaje && <Mensaje tipo='alert-danger'>{mensaje}</Mensaje>}
+              <option value=''>--Selecciona un pokémon--</option>
+              {opciones.map((opcion, index) => (
+                <option
+                  key={index}
+                  value={opcion}
+                >
+                  {opcion}
+                </option>
+              ))}
+            </select>
+            <div className='d-flex justify-content-center'>
+              <button
+                className='btn-orange mt-3 mb-3 w-100'
+                onClick={handleNavigate}
+              >
+                Buscar
+              </button>
+            </div>
+            {mensaje && <Mensaje tipo='alert-danger'>{mensaje}</Mensaje>}
+          </div>
+        </div>
       </Container>
     </>
   )
