@@ -36,11 +36,12 @@ const Pokemon = () => {
     <>
       <Container>
         <div className='d-flex justify-content-center align-items-center vh-100 position-relative'>
-          <div className='grid-col-2 bg-white rounded p-5'>
+          <div className='grid-col-2 bg-white rounded p-5 w-75'>
             <div>
               <img
                 alt='pokemon'
                 src={character.img}
+                style={{ width: '100%' }}
               />
             </div>
             <div className='bg-gris rounded p-5 shadow position-relative card-gris'>
