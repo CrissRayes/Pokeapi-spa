@@ -38,7 +38,7 @@ const Pokemones = () => {
       <Container className='mt-5'>
         <div className='d-flex align-items-center justify-content-center vh-100'>
           <div className='w-50 bg-white bg-opacity-50 rounded p-5'>
-            <h1>Pokemones</h1>
+            <h1>Pokémones</h1>
             <select
               className='form-select'
               value={id}
