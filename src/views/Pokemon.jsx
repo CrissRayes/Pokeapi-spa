@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react'
 
 const Pokemon = () => {
   const [character, setCharacter] = useState([])
-  // se define el estado de abilites y types para no tener el error al momento del map
+  /**
+   * * se define el estado de abilites y types para no tener el error al momento del map
+   */
+
   const [abilites, setAbilities] = useState([])
   const [types, setTypes] = useState([])
   const { id } = useParams()
